@@ -77,7 +77,7 @@ body {
     line-height: 15px;
 }
 .header-navigation__item {
-    margin-right: 47px;
+    margin: 6px 47px 0px 6px;
 }
 .header-navigation__item a {
     text-decoration: none;
@@ -98,7 +98,7 @@ body {
 }
 /*  */
 .hero::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     bottom: 0;
