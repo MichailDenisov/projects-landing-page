@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="text" href="fonts/font.css">
     <title>Document</title>
 </head>
 <body>
@@ -24,17 +25,30 @@
                     <li class="header-navigation__item"><a href="#">CONTACTS</a></li>
                 </ul>
             </nav>
-            <span>+7 (928) 768-32-39</span>
-            <button class="button">Request a call</button>
+            <span class="header-tel">+7 (928) 768-32-39</span>
+            <button class="button button-header">Request a call</button>
         </div>
     </header>
     <main>
         <section class="hero">
             <div class="container hero-container">
-                <h1 class="title">
-                    Turnkey Repair in the 
-                    city of Rostov-on-Don
-                </h1>
+                <div class="hero-contaiher_item"><!--Добавил контейнер -->
+                    <h1 class="title">
+                        Turnkey Repair in the 
+                        city of 
+                        <span class="hero-span">
+                            Rostov-on-Don
+                        </span>
+                    </h1>
+                    <p class="paragraf hero-paragraf">Get ready-made turnkey
+                        repairs on time with work time
+                        saving up to 45 days and 20%
+                        from cost of materials due to
+                        the organization of work 
+                    </p>
+                    <button class="button hero-button hero-button_calculate">CALCULATE THE COST</button>
+                    <button class="button hero-button hero-button_submit ">SUBMIT YOUR APPLICATION</button>
+                </div>
             </div>
         </section>
     </main>
