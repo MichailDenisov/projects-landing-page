@@ -6,34 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link rel="text" href="fonts/font.css">
-    <link href="https://google-webfonts-helper.herokuapp.com/fonts/nunito-sans?subsets=latin" rel="stylesheet">
+    <!-- <link href="https://google-webfonts-helper.herokuapp.com/fonts/nunito-sans?subsets=latin" rel="stylesheet"> -->
     <title>Document</title>
 </head>
 <body class="page-index" id="body">
     <header class="header">
-        <div class="container header-content">
-            <div class="logo">
-                IC "Repair Design Project"
-            </div>
-            <span></span>
-            <nav class="navigation">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    IC "Repair Design Project"
+                </div>
+                <span></span>
+                <nav class="navigation">
                 <ul class="header-navigation">
-                    <li class="header-navigation__item"><a href="#">HOME</a></li>
-                    <li class="header-navigation__item"><a href="#">PROJECTS</a></li>
-                    <li class="header-navigation__item"><a href="#">MEASUREMENT</a></li>
-                    <li class="header-navigation__item"><a href="#">TEAM</a></li>
-                    <li class="header-navigation__item"><a href="#">REVIEWS</a></li>
-                    <li class="header-navigation__item"><a href="#">CONTACTS</a></li>
-                </ul>
-            </nav>
-            <span class="header-tel">+7 (928) 768-32-39</span>
-            <button class="button button-header">Request a call</button>
+                    <li class="header-navigation__item"><a class="heder-nav active" href="#">HOME</a></li>
+                    <li class="header-navigation__item"><a class="heder-nav" href="#">PROJECTS</a></li>
+                    <li class="header-navigation__item"><a class="heder-nav" href="#">MEASUREMENT</a></li>
+                    <li class="header-navigation__item"><a class="heder-nav" href="#">TEAM</a></li>
+                    <li class="header-navigation__item"><a class="heder-nav" href="#">REVIEWS</a></li>
+                    <li class="header-navigation__item"><a class="heder-nav" href="#">CONTACTS</a></li>
+                    </ul>
+                </nav>
+                <span class="header-tel">+7 (928) 768-32-3 9</span>
+                <button class="button button-header">Request a call</button>
+            </div>
         </div>
     </header>
-    <main>
+    <main class="main">
         <section class="section section-hero">
             <div class="container hero-container">
-                <!-- <div class="hero-contaiher_item">Добавил контейнер -->
+                <div class="hero-contaiher_item">
                     <h1 class="title">
                         Turnkey Repair in the<br> 
                         city of 
@@ -48,14 +50,14 @@
                     </p>
                     <button class="button hero-button hero-button_calculate">CALCULATE THE COST</button>
                     <button class="button hero-button hero-button_submit ">SUBMIT YOUR APPLICATION</button>
-                <!-- </div> -->
+                </div>
             </div>
         </section>
         <section class="section slider-section">
       
             <div class="nav nav-slider">
                 <ul class="nav-slider__item">
-                    <li class="nav-item"><a href="#" class="nav-item__link">Rostov-on-Don, Admiral</a></li>
+                    <li class="nav-item"><a href="#" class="nav-item__link active">Rostov-on-Don, Admiral</a></li>
                     <li class="nav-item"><a href="#" class="nav-item__link">Sochi Thieves</a></li>
                     <li class="nav-item"><a href="#" class="nav-item__link">Rostov-on-Don Patriotic</a></li>
                 </ul>
@@ -75,12 +77,66 @@
                     </div>
                 </div>
                 <div class="slider-content slider-content__info">
-                    <div class="slider-info"><h3 class="content-info">City:</h3><p class="paragraf-info">Rostov-on-Don<br>LCD admiral</p></div>
-                    <div class="slider-info"><h3 class="content-info">Repair time:</h3><p class="paragraf-info">3.5 months</p></div>
-                    <div class="slider-info"><h3 class="content-info">apartment area:</h3><p class="paragraf-info">81 m<sup>2</sup></p></div>
-                    <div class="slider-info"><h3 class="content-info">Repair Cost:</h3><p class="paragraf-info">Upon request</p></div>
+                    <div class="slider_cont slider-content_left">
+                        <div class="slider-info"><h3 class="content-info">City:</h3><p class="paragraf-info">Rostov-on-Don<br>LCD admiral</p></div>
+                        <div class="slider-info"><h3 class="content-info">Repair time:</h3><p class="paragraf-info">3.5 months</p></div>
+                    </div>
+                    <div class="slider_cont slider-content_right">
+                        <div class="slider-info slider-info_area"><h3 class="content-info">apartment area:</h3><p class="paragraf-info">81 m<sup>2</sup></p></div>
+                        <div class="slider-info slider-info_repair "><h3 class="content-info">Repair Cost:</h3><p class="paragraf-info">Upon request</p></div>
+                    </div>
                 </div>
+                <div class="dots-navigation">
+                    <img class="dots-navigation__slider" src="icon/leftarrow.svg" alt="leftarrow">
+                    <img class="dots-navigation__slider" src="icon/whiteball.svg" alt="whiteball">
+                    <img class="dots-navigation__slider" src="icon/greyball.svg" alt="greyball">
+                    <img class="dots-navigation__slider" src="icon/greyball.svg" alt="whiteball">
+                    <img class="dots-navigation__slider" src="icon/rightarrow.svg" alt="rightarrow">
+                </div> 
             </div>
+        </section>
+        <section class="section section-control">
+            <div class="container">
+                <div class="control-wrapper">
+                        <div class="section-title"> 
+                            <h3 class="control-title ">online control</h3>
+                        </div>
+                        <div class="control-icon section-control">
+                            <img class="control-icon__item" src="icon/dash.svg" alt="control-icon">
+                            <img class="control-icon__item" src="icon/camera.svg" alt="control-icon">
+                            <img class="control-icon__item" src="icon/dash.svg" alt="control-icon">
+                        </div>
+                        <div class="control-video">
+                            <!-- <img class="control-video__black" src="imeges/image6.jpg" alt="piey-imag"> -->
+                            <img class="control-video__pley"  src="icon/videopley.svg"alt="pley-icon">
+                        </div>
+                        <hr class="control-hr">
+                        <p class="control-paragraf">
+                            At each facility, a camera is installed that broadcasts the progress of work on the clock. At any time, you can go to our website and monitor the progress of work in your apartment. You can watch the live broadcast from one of our facilities!
+ Leave a request below and you will receive a link to the broadcast.
+                        </p>
+                        <form action="#">
+                            <!-- <div class="control-form__item"> -->
+                                <label class="label control-form__label" for="name">Name</label>
+                                <input class="input control-form__input input-name" type="text" name="name" id="name" placeholder="name" value="What is your name:">
+                            <!-- </div> -->
+                    <!-- <div class="control-form__item "> -->
+                                <label class="label control-form__label" for="tel">Phone</label>
+                                <input class="input control-form__input input-phone" type="tel" name="tel" id="tel" placeholder="tel" value="Your phone number:">
+                            <!-- </div> -->
+                            <button class="button button-control">Submit</button>
+                            <div class="checkbox">
+                                <label class="checkbox-label">
+                                  <input type="checkbox" class="control-checkbox" >
+                                  <span class="control-checkbox__fake"></span>
+                                  <span class="control-checkbox__text">I agree to the processing of personal data.</span>
+                                </label>
+                              </div>
+
+                    </label>
+             </form>
+                </div>
+            </div>  
         </section>
     </main>
     <footer></footer>

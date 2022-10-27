@@ -25,35 +25,47 @@
          url('../fonts/nunito-sans-v12-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/nunito-sans-v12-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
         }
-        body {
-            margin: 0 auto;
-        }
+:root{
+    --font-primary:'Nunito Sans', sans-serif;
+    --font-primary-heading:'Yeseva One';
+    --color-font-gold: #E3B873;
+    --color-font-wihte: #FFFFFF;
+    --color-backround-black: #131313;
+    --color-backround-wihte: #FFFFFF;
+}
+body {
+    margin: 0 auto;
+}
 * {
     padding: 0;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: var(--font-primary-heading);
     box-sizing: border-box;
   }
 a:hover {   
     text-decoration: underline; /* Добавляем подчеркивание при наведении курсора на ссылку */
     color: #E3B873; 
 }
+/* .heder-nav:hover {   
+    text-decoration: underline; 
+    color: #E3B873; 
+} */
+.active {
+    text-decoration-color: #E3B873;
+    /* color: #E3B873;    */
+}
 .container {
     max-width: 1300px;
     margin: 0 auto;
-    margin-right: 78px;
+    /* margin-right: 78px; */
 }
 /* .page-index {max-width: 1400px;} */
-.header {
-    /* max-width: 1438px; */
-    margin: 0 auto;
-}
 .header-content {
     display: flex;
     justify-content: space-between;
     height: 83px;
     align-items: center;
-    margin-left: 167px;
-    margin-right: 167px;
+    margin-left: -1px;
+    margin-right: 21px;
 }   
 .header-tel {
     font-size: 11px;
@@ -92,10 +104,14 @@ a:hover {
     line-height: 15px;
     text-transform: uppercase;
     color: #E3B873;
+    margin-left: 24px;
 }
 .header { 
     background-color: black;
     /* width: 1438px; */
+}
+.navigation {
+    margin-right: 33px;
 }
 .header-navigation {
     list-style: none;
@@ -104,8 +120,13 @@ a:hover {
 .header-navigation__item {
     margin: 0px 47px 0px 0px;
 }
-.header-navigation__item a {
+.header-navigation__item:nth-child(6) {
+    margin: 0px;
+}
+
+.header-navigation__item a{
     /* font-family: 'Nunito Sans'; */
+    font-family: var(--font-primary);
     font-weight: 400;
     font-style: normal;
     text-decoration: none;
@@ -113,6 +134,13 @@ a:hover {
     font-size: 11px;
     line-height: 15px;
 }
+.heder-nav:hover {
+    text-decoration: underline; /* Добавляем подчеркивание при наведении курсора на ссылку */
+    color: #E3B873;  
+}
+/* .header-nav {
+    color: white;
+} */
 .section {
     /* max-width: 1440px; */
     margin: 0 auto;
@@ -124,12 +152,9 @@ a:hover {
     padding-top: 194px;
     position: relative;
 }
-.hero-container { 
+.hero-container {
     position: relative;
     z-index: 1;
-
-    /* width: 676.11px;
-    height: 305px; */
 }
 /*  */
 .section-hero::before {
@@ -166,10 +191,8 @@ a:hover {
     font-size: 22px;
     line-height: 36px;
 } */
-/* .hero-contaiher_item {
-    height: 305px;
-    width: 676.11px ;
-} */
+.hero-contaiher_item {
+    margin-left: 63px;} 
 .title {
     margin: 0 auto;
     font-family: 'Yeseva One';
@@ -205,9 +228,10 @@ a:hover {
 .slider-section {
     background-color:#131313;
     margin-top: -17px;
+    padding-bottom: 415px
 }
 .nav-slider {
-    margin-left: 626px;/* display: flex; */
+    margin-left: 700px;/* display: flex; */
     padding-top: 107px
 }
 .nav-slider__item {
@@ -217,7 +241,7 @@ a:hover {
     /* color: #E3B873; */
 } 
 .nav-item {
-    font-family: 'Yeseva One',;
+    font-family: var(--font-primary);
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -229,10 +253,8 @@ a:hover {
     color: rgba(255, 255, 255, 0.3);
     text-decoration: none;
 }
-.picture-slider {
-    /* margin-top: 52px; */
-    padding-left: 31px;
-}
+/* .picture-slider {
+} */
 .slider-content {font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
@@ -240,6 +262,28 @@ a:hover {
     line-height: 27px;
     color: #FFFFFF;
     margin-top: 49px;
+}
+.slider_cont {
+    margin-left: 68px;
+}
+/* .slider-content_left {
+margin: 0;
+} */
+slider-content_right {
+    margin-left:  0px;
+}
+.dots-navigation {
+    height: 13px;
+    /* width: 300px; */
+    margin-top: 65px;
+    padding-left: 65px;
+    /* background: #FFFFFF; */
+}
+.dots-navigation__slider {
+    margin-right: 18px;
+}
+.dots-navigation__slider:nth-child(5) {
+    margin: 0px;
 }
 .subtitle {
     font-family: 'Yeseva One';
@@ -254,7 +298,7 @@ a:hover {
 }
 .slider-content__title {
     display: flex;
-    justify-content: flex-start;
+   justify-content: space-around;
 }
 .slider-paragraf {
     font-family: 'Nunito Sans';
@@ -266,10 +310,25 @@ a:hover {
 .slider-content__info {
     font-size: 13px;
     line-height: 21px;
+    margin-top: -280px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    
+    /*mardgin? добавить флекс grid oder */
 }
 .slider-subtitle {
     margin-bottom: 0px;
     height: 161px;
+    margin-right: -36px;
+}
+.slider-info {
+    margin: 0px;
+    /* margin-bottom: 34px; */
+    
+}
+.slider-info:nth-child(odd) {
+    /* margin: 0px; */margin-top: 0px;
 }
 .content-info {
     font-family: 'Yeseva One';
@@ -279,4 +338,79 @@ a:hover {
     line-height: 25px;
     text-transform: uppercase;
     color: #E3B873;
+    margin-bottom: 17px;
 }
+.paragraf-info {
+    margin-top: 0px;
+}
+.slider-info_area {
+    margin-top: 0px;
+}
+.slider-info_repair {
+    margin-top: 35px;
+}
+.control-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: -327px;
+}
+.control-hr {
+   width: 55px;
+   height: 2px;
+   background: #E3B873;
+   border-radius: 30px;
+   border: none;
+   /* color: #E3B873; */
+}
+.control-video {
+    background-image: url(/imeges/image6.jpg);
+    height: 434px;
+    width: 817px;
+    border-radius: 0px;
+    position: relative;
+    margin-top: 38px;
+    /* background: rgba(0, 0, 0, 0.8); */
+}
+.control-video::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.control-video__pley { 
+position: relative;
+z-index: 1;
+display: flex;
+margin: 0 auto;
+margin-top: 150px;
+}
+.section-title {
+    margin-bottom: -18px;
+    margin-top: -21px;
+
+}
+.control-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;  
+      color: var(--color-font-wihte);
+    font-family: var(--font-primary-heading);
+}
+.control-icon {
+    /* margin-bottom: 31px; */
+}
+/* .control-icon__item:nth-child(2) {
+    margin-top: 0px;
+} */
+/* .section-control {
+    margin-top: -17px;
+} */
