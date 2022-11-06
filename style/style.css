@@ -4,8 +4,8 @@
     font-style: normal;
     font-weight: 400;
     src: local(''),
-         url('../fonts/yeseva-one-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/yeseva-one-v20-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+          url('../fonts/yeseva-one-v20-latin-regular.woff2') format('woff2'), 
+         url('../fonts/yeseva-one-v20-latin-regular.woff') format('woff');  
   }
 /* nunito-sans-regular - latin */
 @font-face {
@@ -13,18 +13,10 @@
     font-style: normal;
     font-weight: 400;
     src: local(''),
-    url('../fonts/nunito-sans-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('../fonts/nunito-sans-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('../fonts/nunito-sans-v12-latin-regular.woff2') format('woff2'), 
+    url('../fonts/nunito-sans-v12-latin-regular.woff') format('woff'); 
 }
 /* nunito-sans-italic - latin */
-@font-face {
-    font-family: 'Nunito Sans'sans-serif;
-    font-style: italic;
-    font-weight: 400;
-    src: local(''),
-         url('../fonts/nunito-sans-v12-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/nunito-sans-v12-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-        }
 :root{
     --font-primary:'Nunito Sans', sans-serif;
     --font-primary-heading:'Yeseva One';
@@ -72,11 +64,11 @@ a:hover {
     color: #E3B873;
 }
 .button {
+
     background: #E3B873;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     border-radius: 2px;
-    /* font-family: 'Nunito Sans'; */
-    /* font-style: italic; */
+    font-family: var(--font-primary);
     font-weight: 400;
     font-size: 11px;
     color: white;
@@ -97,7 +89,7 @@ a:hover {
     height: 37px;
 }
 .logo {
-    font-family: 'Nunito Sans';
+    font-family: var(--font-primary);
     font-style: normal;
     font-weight: 400;
     font-size: 11px;
@@ -108,6 +100,8 @@ a:hover {
 }
 .header { 
     background-color: black;
+    max-width: 1440px;
+    margin: 0 auto;
     /* width: 1438px; */
 }
 .navigation {
@@ -121,7 +115,7 @@ a:hover {
     margin: 0px 47px 0px 0px;
 }
 .header-navigation__item:nth-child(6) {
-    margin: 0px;
+    margin-right: 0px;
 }
 
 .header-navigation__item a{
@@ -134,7 +128,7 @@ a:hover {
     font-size: 11px;
     line-height: 15px;
 }
-.heder-nav:hover {
+.header-nav:hover {
     text-decoration: underline; /* Добавляем подчеркивание при наведении курсора на ссылку */
     color: #E3B873;  
 }
@@ -142,7 +136,7 @@ a:hover {
     color: white;
 } */
 .section {
-    /* max-width: 1440px; */
+    max-width: 1440px;
     margin: 0 auto;
 }
 .section-hero {
@@ -198,11 +192,14 @@ a:hover {
     font-family: 'Yeseva One';
     font-style: normal;
     font-weight: 400;
+}
+.title-hero {
     font-size: 40px;
     line-height: 53px;
     text-transform: uppercase;
     color: #FFFFFF;
     max-width: 1299px;
+
 }
 .hero-span {
     font-family: 'Yeseva One';
@@ -255,7 +252,8 @@ a:hover {
 }
 /* .picture-slider {
 } */
-.slider-content {font-family: 'Nunito Sans';
+.slider-content 
+    {font-family: var(--font-primary);
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -301,7 +299,7 @@ slider-content_right {
    justify-content: space-around;
 }
 .slider-paragraf {
-    font-family: 'Nunito Sans';
+    font-family: var(--font-primary);
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -324,6 +322,7 @@ slider-content_right {
 }
 .slider-info {
     margin: 0px;
+    font-family: var(--font-primary-heading);
     /* margin-bottom: 34px; */
     
 }
@@ -341,6 +340,11 @@ slider-content_right {
     margin-bottom: 17px;
 }
 .paragraf-info {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
     margin-top: 0px;
 }
 .slider-info_area {
@@ -363,10 +367,11 @@ slider-content_right {
    background: #E3B873;
    border-radius: 30px;
    border: none;
+   margin-top: 65px;
    /* color: #E3B873; */
 }
 .control-video {
-    background-image: url(/imeges/image6.jpg);
+    background-image: url(../imeges/image6.jpg);
     height: 434px;
     width: 817px;
     border-radius: 0px;
@@ -384,11 +389,11 @@ slider-content_right {
     background-color: rgba(0, 0, 0, 0.8);
 }
 .control-video__pley { 
-position: relative;
-z-index: 1;
-display: flex;
-margin: 0 auto;
-margin-top: 150px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 150px;
 }
 .section-title {
     margin-bottom: -18px;
@@ -405,12 +410,165 @@ margin-top: 150px;
       color: var(--color-font-wihte);
     font-family: var(--font-primary-heading);
 }
-.control-icon {
-    /* margin-bottom: 31px; */
+.control-paragraf {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 37px;
+    text-align: center;
+    color: #363636;
+    height: 131px;
+    margin: 20px 0px 90px 0px;
 }
-/* .control-icon__item:nth-child(2) {
-    margin-top: 0px;
+.control-form {
+    display: flex;
+    justify-content: center;
+}
+.control-form__input {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    height: 26px;
+    width: 231px;
+    border: none;
+    border-bottom: 1px solid #3636364D;
+}
+.button-control{
+    height: 51px;
+    width: 200px;
+    border-radius: 2px;
+    border: none;
+    /* font-family: var(--font-primary); */
+    font-style: normal;
+    /* font-weight: 400; */
+    font-size: 13px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+.control-form__label{
+    font-family: 'Nunito Sans'sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    
+    color: rgba(54, 54, 54, 0.5);
+    margin: 5px 52px -3px 0px;
+}
+/* .control-form__item {
+    
+}  */
+.control-icon__item:nth-child(2) {
+    margin-top: 12px;
+    margin-bottom: -12px;
+}
+.checkbox-label {
+    margin: 32px 0px 0px 0px;
+    font-family: var(--font-primary);
+    /* font-size: 14px; */
+    line-height: 163.68%;
+    color: #181818;
+}
+.control-checkbox {
+    border-radius: 1px;
+    height: 18px;
+    width: 18px;
+}
+.control-checkbox:hover {
+    background: #E3B873;
+    border-color: #E3B873;
+    background-image: url(../icon/checkbox.svg);
+    z-index: 2;
+}
+/* .control-checkbox__fake {
+    background-image: url(../icon/checkbox.svg);
+    z-index: 1;
+
 } */
-/* .section-control {
-    margin-top: -17px;
-} */
+.newsletter {
+    color: white;
+
+}
+.container-types {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title-types {
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #181818;
+}
+.picture-block {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 83px;
+    align-items: center;
+    margin-left: -1px;
+    margin-right: 21px;
+}
+.footer-tel {
+    font-size: 11px;
+    color: #E3B873;
+}
+.footer-header {
+    outline: 0px;
+    border: 0px;
+    padding: 13px 33px;
+    text-transform: uppercase;
+    width: 161px;
+    height: 37px;
+}
+.footer { 
+    background-color: black;
+    max-width: 1440px;
+    margin: 0 auto;
+    /* width: 1438px; */
+}
+.footer-navigation {
+    list-style: none;
+    display: flex;
+}
+.footer-navigation__item {
+    margin: 0px 47px 0px 0px;
+}
+.footer-navigation__item:nth-child(6) {
+    margin: 0px;
+}
+
+.footer-navigation__item a{
+    /* font-family: 'Nunito Sans'; */
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: white;
+    font-size: 11px;
+    line-height: 15px;
+}
+.footer-nav:hover {
+    text-decoration: underline; /* Добавляем подчеркивание при наведении курсора на ссылку */
+    color: #E3B873;  
+}
+.button-footer {
+    outline: 0px;
+    border: 0px;
+    padding: 13px 33px;
+    text-transform: uppercase;
+    width: 161px;
+    height: 37px;
+}
+
+
+
