@@ -228,7 +228,7 @@ a:hover {
     padding-bottom: 415px
 }
 .nav-slider {
-    margin-left: 700px;/* display: flex; */
+    margin-left: 633px;/* display: flex; */
     padding-top: 107px
 }
 .nav-slider__item {
@@ -284,7 +284,7 @@ slider-content_right {
     margin: 0px;
 }
 .subtitle {
-    font-family: 'Yeseva One';
+    /* font-family: 'Yeseva One'sans-serif; */
     font-style: normal;
     font-weight: 400;
     font-size: 27px;
@@ -499,17 +499,129 @@ slider-content_right {
     flex-direction: column;
     align-items: center;
 }
+.types-block__title {
+    margin-left: -8px;
+}
 .title-types {
     font-size: 20px;
     line-height: 28px;
     text-align: center;
     text-transform: uppercase;
     color: #181818;
+    margin-top: 136px;
+    font-weight: 600;
+}
+.picture-types {
+    margin: 16px;
 }
 .picture-block {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
 }
+.wrapper {
+    margin: 0px 12px 0px 18px;
+}
+.types-block__wrapper {
+    margin: -128px 30px 0 30px;
+    padding: 4px 33px 52px 43px;
+    background: #FFFFFF;
+    box-shadow: 10px 10px 20px rgb(0 0 0 / 3%);
+    z-index: 1;
+    position: relative;
+}
+.types-block__button {
+    min-width: 228px;
+	padding: 17px 0;
+	font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    border: 0px;
+    margin: 0px 0px 0px -45px;
+}
+.types-list {
+    margin-top: -13px;
+}
+.types-list__item {
+    font-family: 'Nunito Sans'sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 27px;
+    color: #959595;
+}
+.types-measurements {
+    /* height: 1643px; */
+    padding-top: 157px;
+    display: grid;
+    grid-template-columns: 1fr 41%;
+    grid-gap: 100px;
+    width: 1170px;
+    margin: 0 auto;
+    width: 100%;
+    background-color: white;
+}
+.types-measurements__list {
+    /* background-image: url(../img/background.svg); */
+    margin-left: -71px;
+    padding: 0 0 242px 0;
+    background-position: left top -88px;
+    background-repeat: no-repeat;
+    background-image: url(../imeges/museum.jpg);
+}
+.types-measurements__ol {
+    margin-left: 243px;
+    
+}
+.measurements-list__item {
+    counter-reset: item;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #363636;
+    margin: 0 0 86px 0;
+}
+.measurements-list__number {
+    background: #E3B873;
+    border: 8px solid #FFFFFF;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+    border-radius: 50%;
+    width: 57px;
+    height: 57px;
+    font-family: var(--font-primary-heading);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    /* flex:0 0 auto; */
+	padding: 8px 0 10px;
+	margin-right: 10px;
+    color: #FFFFFF;
+}
+.measurements-form {
+    height: 509px;
+    width: 506px;
+    background-color: var(--color-backround-black);
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 0px;
+    margin: 17px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+}
+.measurements-form__title {
+    font-size: 18px;
+    line-height: 26px;
+    color: #FFFFFF;
+	font-weight: 400;
+    text-align: center;
+}
+
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -534,6 +646,7 @@ slider-content_right {
     background-color: black;
     max-width: 1440px;
     margin: 0 auto;
+    height: 133px;
     /* width: 1438px; */
 }
 .footer-navigation {
