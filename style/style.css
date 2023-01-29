@@ -1,6 +1,6 @@
 /* yeseva-one-regular - latin */
 @font-face {
-    font-family: 'Yeseva One', cursive;
+    font-family: 'Yeseva One, cursive';
     font-style: normal;
     font-weight: 400;
     src: local(''),
@@ -16,6 +16,9 @@
     url('../fonts/nunito-sans-v12-latin-regular.woff2') format('woff2'), 
     url('../fonts/nunito-sans-v12-latin-regular.woff') format('woff'); 
 }
+@import url(../#clients-picture/clients-picture__сiti1);
+@import url(../#clients-picture/__сiti2);
+@import url(../#clients-picture/clients-picture.css);
 /* nunito-sans-italic - latin */
 :root{
     --font-primary:'Nunito Sans', sans-serif;
@@ -616,11 +619,10 @@ slider-content_right {
     list-style-type: none;
     display: flex;
     align-items: center;
-    /* font-weight: 400; */
-    /* font-size: 14px; */
     line-height: 19px;
     color: #363636;
     margin: 0 0 86px 0;
+    text-align: start;
 }
 .measurements-list__number {
     background: #E3B873;
@@ -635,10 +637,10 @@ slider-content_right {
     font-size: 20px;
     line-height: 25px;
     text-align: center;
-    /* flex:0 0 auto; */
 	padding: 8px 0 10px;
 	margin-right: 10px;
     color: #FFFFFF;
+    flex: 0 0 auto;
 }
 .measurements-form {
     /* font-family: var(--font-primary); */
@@ -794,6 +796,9 @@ slider-content_right {
 }
 .container-client {
     text-align: center;
+    /* background-image: url('../imeges/citi1.png'); */
+
+    
 }
 .clients-content {
     margin-top:  107px;
@@ -860,11 +865,12 @@ slider-content_right {
 .clients-review__item-paragr {
     font-family: var(--font-primary);
     font-style: normal;
-font-weight: 400;
-font-size: 13px;
-line-height: 180%;
-color: #959595;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 180%;
+    color: #959595;
     padding: 0px 25px 0px;
+    margin-top: 22px;
 }
 .clients-review__rectangle {
     height: 54px;
@@ -873,6 +879,33 @@ color: #959595;
     box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
     display: flex;
     align-items: center;
+    margin-top: 67px;
+    justify-content: space-around;
+}
+.clients-review__rectangle-square {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--color-font-wihte);
+}
+.clients-picture{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -398px;
+}
+.clients-picture__city {
+    height: 770px;
+    width: 720px;
+}
+.clients-picture__city1{
+    background-image: url('../imeges/citi1.png');
+    background-size: contain;
+}
+.clients-picture__city2 {
+    background-image: url('../imeges/citi2.png');
+    background-size: contain;
 }
 .footer-content {
     display: flex;
