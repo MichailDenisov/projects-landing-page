@@ -1,0 +1,23 @@
+/* .form-adress {
+    background-color: blue;
+    width: 883px;
+    height: 445px;
+
+}
+.form-title {
+    color: var(--color-font-gold);
+} */
+/* .form-adress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-backround-black);
+    width: 883px;
+    height: 445px;
+    margin-top: -241px;
+    margin-left: 20px;
+
+} */
+body{
+    background-color: blueviolet;
+}
