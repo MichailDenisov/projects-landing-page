@@ -1,0 +1,8 @@
+@media (max-width: 768px) {
+    .slider-content__title {
+        display: grid;
+        grid-template-columns: 100% ;
+        grid-template-rows: 148px 174px 143px 200px;
+    }
+ 
+}

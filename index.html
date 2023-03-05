@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- maximum-scale=1.0, user-scalable=no -->
     <link rel="stylesheet" href="style/style.css">
     <link rel="text" href="fonts/font.css">
     <!-- <link href="https://google-webfonts-helper.herokuapp.com/fonts/nunito-sans?subsets=latin" rel="stylesheet"> -->
@@ -19,12 +20,12 @@
                 <span></span>
                 <nav class="navigation">
                 <ul class="header-navigation">
-                    <li class="header-navigation__item"><a class="heder-nav active" href="#">HOME</a></li>
-                    <li class="header-navigation__item"><a class="heder-nav" href="#">PROJECTS</a></li>
-                    <li class="header-navigation__item"><a class="heder-nav" href="#">MEASUREMENT</a></li>
-                    <li class="header-navigation__item"><a class="heder-nav" href="#">TEAM</a></li>
-                    <li class="header-navigation__item"><a class="heder-nav" href="#">REVIEWS</a></li>
-                    <li class="header-navigation__item"><a class="heder-nav" href="#">CONTACTS</a></li>
+                    <li class="header-navigation__item"><a class="header-nav active" href="#">HOME</a></li>
+                    <li class="header-navigation__item"><a class="header-nav" href="#">PROJECTS</a></li>
+                    <li class="header-navigation__item"><a class="header-nav" href="#">MEASUREMENT</a></li>
+                    <li class="header-navigation__item"><a class="header-nav" href="#">TEAM</a></li>
+                    <li class="header-navigation__item"><a class="header-nav" href="#">REVIEWS</a></li>
+                    <li class="header-navigation__item"><a class="header-nav" href="#">CONTACTS</a></li>
                     </ul>
                 </nav>
                 <span class="header-tel">+7 (928) 768-32-39</span>
@@ -44,12 +45,13 @@
                         </span>
                     </h1>
                     <p class="paragraf hero-paragraf">
-                        Get ready-made turnkey repairs on time<br>with work time
-                        saving up to 45 days and 20% from<br> cost of materials due to
+                        Get ready-made turnkey repairs on time<br/>with work time
+                        saving up to 45 days and 20% from<br/> cost of materials due to
                         the organization of work 
                     </p>
                     <button class="button hero-button hero-button_calculate">CALCULATE THE COST</button>
                     <button class="button hero-button hero-button_submit ">SUBMIT YOUR APPLICATION</button>
+                    <button class="button hero-button hero-button___app ">APPLICATION</button>
                 </div>
             </div>
         </section>
@@ -60,8 +62,8 @@
                     <div class="slider-subtitle">
                         <h2 class="title subtitle">Completed<br>projects</h2>
                         <p class="slider-paragraf">
-                            Only a small part of the work performed by our company is presented<br>
-                            on thesite. For 14 years on in the construction<br> 
+                            Only a small part of the work performed by our company is presented<br/>
+                            on thesite. For 14 years on in the construction<br/> 
                             market we have made happy more than 1000 families
                         </p>
                     </div>
@@ -108,7 +110,7 @@
                         </div>
                         <div class="control-video">
                             <!-- <img class="control-video__black" src="imeges/image6.jpg" alt="piey-imag"> -->
-                            <img class="control-video__pley"  src="icon/videopley.svg"alt="pley-icon">
+                            <img class="control-video__pley"  src="icon/videopley.svg" alt="pley-icon">
                         </div>
                         <hr class="control-hr">
                         <p class="control-paragraf">
@@ -227,7 +229,7 @@
                         <label class="label measurements-form__label" for="tel">Phone</label>
                             <input class="input measurements-form__input input-phone" type="tel" name="tel" id="tel" placeholder="tel" value="Your phone number:">
                         
-                            <label class="label measurements-form__label" for="Email">Email</label>
+                            <label class="label measurements-form__label" for="email">Email</label>
                             <input class="input measurements-form__input input-email" type="email" name="email" id="email" placeholder="email" value="Your email"><br>
                         
                         <label class="measurements-checkbox">
@@ -370,18 +372,21 @@
             </label><br>
             <button class="button button-adress">Submit</button>
     </form>
-    <h2 class="title map-title">Rostov-on-Don, Nansen St., 239 Shopping Center Decorum Tel +7 (928) 768 32 29</h2>
-            <div class="map-icon">
-                <img src="icon/emeilmap.svg" alt="mail" srcset="">
-                <img src="icon/cammap.svg" alt="cam" srcset="">
-            </div>
+        <div class="content-adress__map">
+        <h2 class="title map-title">Rostov-on-Don, Nansen St., 239 Shopping Center<br/>Decorum Tel +7 (928) 768 32 29</h2>
+        <div class="map-icon">
+            <img class="map-icon__mail" src="icon/emeilmap.svg" alt="mail">
+            <img class="map-icon__cam" src="icon/cammap.svg" alt="cam">
+        </div>
+            <img src="images/map.jpg" alt="map">
+
+        </div>
             </div>
 
         </section>
     </main>
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
+        <div class="container footer-container">
                 <div class="logo">
                     IC "Repair Design Project"
                 </div>
@@ -398,7 +403,6 @@
                 </nav>
                 <span class="footer-tel">+7 (928) 768-32-39</span>
                 <button class="button button-footer">Request a call</button>
-            </div>
         </div>
     </footer>
 </body>
