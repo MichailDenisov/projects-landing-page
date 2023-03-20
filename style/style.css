@@ -18,7 +18,8 @@
 @import '../adress.blocks/__form.css';
 @import "../clients-picture/clients-picture.css";
 @import "../touch.blocks/header/header.css";
-@import "../style/slider-mjbile.blocks/slider.css";
+@import "../slider-mjbile.blocks/slider.css";
+@import "../base.scss/verable.scss";
 :root{
     --font-primary:'Nunito Sans', sans-serif;
     --font-primary-heading:'Yeseva One';
@@ -1054,12 +1055,10 @@ margin-bottom: 39px;
         margin: 0 auto;
     }
     .logo{
-        font-family: var(--font-primary);
         font-size: 15px;
     }
     .header-tel {
         font-size: 15px;
-        color: var(--color-font-wihte);
     }
     .slider-content__title {
         display: grid;
@@ -1070,28 +1069,138 @@ margin-bottom: 39px;
         margin: 30px 0px 0px 0px;
         text-align: center;
         }
-        .slider-paragraf {
-            font-size: 16px;
-            
+    .slider-paragraf {
+        font-size: 12pt;
+        white-space: nowrap;
+        
+    }
+    .slider-content__info {
+        font-size: 14px;
+        line-height: 138%;
+        margin: 105pt;
+        margin-left: -18px;
+        margin-right: 154px;
+        margin-bottom: 63px;
+    }
+    .slider-info__time {
+        margin-top: 59px;
+    }
+    .slider-info_repair{
+            margin-top: 76px;
         }
     .nav-slider__item {
         list-style: none;
         display: flex;
     }
-    .nav-item {
+    .control-video {
+        width: 708px;
+    } 
+    .control-title {
+        font-size: 35px;
+        padding-bottom: 32px;
+    } 
+    .control-form {
+        display: flex;
+        flex-direction: column;
+    } 
+    .control-wrapper {
+    background-color: var(--color-backround-black);  
+    }
+    .control-paragraf {
+        font-size: 13pt;
+        color: var(--color-font-wihte);
+    }
+    .control-form__input {
+        font-size: 18px;
+        height: 56px;
+        width: 676px;
+        border-bottom: 1px solid var(--color-font-wihte);
+        margin-left: 1px;
+        background-color: black;
+        color: white;
+    }
+    .control-form__label {
+        font-size: 18px;
+        line-height: 21px;
+        /* color: rgba(54, 54, 54, 0.5); */
+        margin: 51px 11px 58px 11px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    .control-checkbox__text {
+        font-size: 18pt;
+        color: var(--color-font-wihte);
+    }
+    .checkbox-label {
+        margin: -213px 0px 143px 0px;
+        width: 504pt;    }
+    .button-control {
+        height: 92px;
+        width: 683px;
+        font-size: 20px;
+        margin-top: 104px;
+        margin-left: 9px;
+    }
+    .picture-block {
+        display: flex;
+        margin-top: 10px;
+        flex-direction: column;
+    }
+    .dots-navigation,.nav-item,.types-measurements,.container-client,.fantasies-navigation__item {
         display: none;
     }
+    /* .container-fantasies {
+        object-fit: cover;
+        height: 242px;
+        width: 340px;
+      } */
+      /* .section-fantasies {
+        height: 864px;
+        background-color: var(--color-backround-black);
+        background-size: cover;
+        position: relative;
+        margin-top: 202px;
+    } */
+        .fantasies-navigation__title{
+            margin-top: 111pt;
+            text-align: center;
+    }
+    .fantasies-picture,.section-fantasies {
+        display: none;
+        /* display: flex;
+        margin-left: -420px; */
+    }
+    .fantasies-picture__mobile{
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+    /* background-image: url("../images/fantasies.jpg"); */
+
+    }
+    .section-fantasie__mobile {
+        background: linear-gradient(109.8deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%);
+        /* height: 0; */
+    }
+    
 }
+/* .page-index {
+    width: calc(250px + (1500 - 250) * ((100vw - 500px) / (1920 - 500)));
+  } */
+  
 @media (max-width: 768px) {
     .hero-contaiher_item {
-        max-width: 100%;
-        margin-left: 105px;
-        margin-top: -115px;
+        max-width: 110%;
+        margin-left: 66px;
+        margin-top: -82px;
+    }
+    .hero-paragraf {
+        font-size: 20px;
+        margin-top: 40px;
     }
     .hero-button {
-        width: 576px;
-        height: 70px;
-        margin-top: 26px;
+        width: 644px;
+        height: 78px;
+        margin-top: 56px;
         font-size: 13px;
     }
     .hero-button___app {
@@ -1107,11 +1216,31 @@ margin-bottom: 39px;
     .hero-span {
         font-size: 45px;
     }
+    .footer {
+        display: none;
+     }
+     *{ 
+        margin:0; 
+        padding:0; 
+    } 
+    .page-index { 
+        width:768px; 
+        margin:0 auto; 
+        text-align:left; 
+        } 
+    .picture-slider {
+        margin-left: 35pt;
+        margin: 0 auto;
+    }
+
 }
 @media (min-width: 769px) {
     
     .hero-button___app {
     display: none;    
+    }
+    .section-fantasie__mobile{
+        display: none;
     }
 }
 
