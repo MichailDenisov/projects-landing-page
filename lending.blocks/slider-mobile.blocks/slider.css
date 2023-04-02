@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+   .footer {
+      display: none;
+   }
+   .page-index {
+      width: 768px;
+      margin: 0 auto;
+      text-align: left;
+      background-color: blueviolet;
+   }
+}
