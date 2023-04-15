@@ -20,6 +20,7 @@
 @import "../touch.blocks/header/header.css";
 @import "../lending.blocks/slider-mobile.blocks/slider.css";
 @import "../base.scss/verable.scss";
+
 :root{
     --font-primary:'Nunito Sans', sans-serif;
     --font-primary-heading:'Yeseva One';
@@ -229,8 +230,8 @@ ul {
     color: rgba(255, 255, 255, 0.3);
     text-decoration: none;
 }
-.slider-content 
-    {font-family: var(--font-primary);
+.slider-content { 
+    font-family: var(--font-primary);
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -245,11 +246,25 @@ slider-content_right {
 }
 .dots-navigation {
     height: 13px;
+    width: 24%;
     margin-top: 65px;
-    padding-left: 138px;
+    padding-left: 128px;
+    display: flex;
+    justify-content: space-around;
+}
+.dots-navigation__slider-circle {
+    background-color: var(--color-backround-black);
+    height: 10px;
+    width: 10px;
+    border: 2px solid var(--color-backround-wihte);
+    border-radius: 50%;
+    cursor: pointer;
 }
 .dots-navigation__slider {
     margin-right: 18px;
+}
+.dots-navigation__slider-circle:hover { 
+    background-color:var(--color-backround-wihte);    
 }
 .dots-navigation__slider:nth-child(5) {
     margin: 0px;

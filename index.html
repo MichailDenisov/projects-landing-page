@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- maximum-scale=1.0, user-scalable=no -->
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="./lending.blocks/slider-mobile.blocks/slider.css">
     <link rel="stylesheet" href="base.scss/verable.scss">
     <link rel="text" href="fonts/font.css">
     <!-- <link href="https://google-webfonts-helper.herokuapp.com/fonts/nunito-sans?subsets=latin" rel="stylesheet"> -->
@@ -76,8 +77,14 @@
                                 <li class="nav-item"><a href="#" class="nav-item__link">Rostov-on-Don Patriotic</a></li>
                             </ul>
                         </div>
-                        <img class="picture-slider__adm" src="images/slider2.jpg" width="679" height="482" alt="Rostov-on-Don">
-                    </div>
+                        <!-- <img class="pic__sl picture-slider__adm" src="images/slider2.jpg"  alt="Rostov-on-Don"> -->
+                        <div class="pic__sl picture-slider__adm">
+                            <div class="slider-arrows">
+                                <div class="slider__arrow left">&#9668;</div>
+                                <div class="slider__arrow right">&#9658;</div>
+                            </div>
+                        </div>    
+                    <!-- </img> -->
                 </div>
                 <div class="slider-content slider-content__info">
                     <div class="slider_cont slider-content_left">
@@ -91,9 +98,12 @@
                 </div>
                 <div class="dots-navigation">
                     <img class="dots-navigation__slider" src="icon/leftarrow.svg" alt="leftarrow">
-                    <img class="dots-navigation__slider" src="icon/whiteball.svg" alt="whiteball">
-                    <img class="dots-navigation__slider" src="icon/greyball.svg" alt="greyball">
-                    <img class="dots-navigation__slider" src="icon/greyball.svg" alt="whiteball">
+                    <!-- <img class="dots-navigation__slider" src="icon/whiteball.svg" alt="whiteball"> -->
+                    <div class="dots-navigation__slider-circle"><a class="img-slider" href="#"></a></div>
+                    <div class="dots-navigation__slider-circle"><a class="img-slider" href="#"></a></div>
+                    <div class="dots-navigation__slider-circle"><a class="img-slider" href="#"></a></div>
+                    <!-- <img class="dots-navigation__slider" src="icon/greyball.svg" alt="greyball">
+                    <img class="dots-navigation__slider" src="icon/greyball.svg" alt="whiteball"> -->
                     <img class="dots-navigation__slider" src="icon/rightarrow.svg" alt="rightarrow">
                 </div> 
             </div>
@@ -416,5 +426,6 @@
         </div>
     </footer>
     <script src="index.js"></script>
+    <script src="./lending.blocks/slider-mobile.blocks/slider.jsx"></script>
 </body>
 </html>
