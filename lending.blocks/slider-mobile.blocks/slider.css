@@ -1,13 +1,14 @@
-.pic__sl {
-    background-image: url('./../../images/slider1.jpg');
+/* .pic__sl {
+    background-image: url('./../../images/slider1.jpg'); *
     
-    width: 679px;
-    height: 482px;
-}
+     width: 679px;
+    height: 482px; 
+} */
 .picture-slider__adm {
     position: relative;
     width: 679px;
      height: 482px;
+     /* margin-top: -490px; */
 }
 .picture-slider__adm .image {
     background-size: cover;

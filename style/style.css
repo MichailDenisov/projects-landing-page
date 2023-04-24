@@ -246,11 +246,14 @@ slider-content_right {
 }
 .dots-navigation {
     height: 13px;
-    width: 24%;
-    margin-top: 65px;
-    padding-left: 128px;
+    width: 27%;
+    margin-top: 499px;
+    /* padding-left: -8px; */
     display: flex;
     justify-content: space-around;
+    /* margin-right: 50px; */
+    margin-left: -503px;
+    /* padding-right: -45px; */
 }
 .dots-navigation__slider-circle {
     background-color: var(--color-backround-black);
@@ -292,7 +295,7 @@ slider-content_right {
 .slider-content__info {
     font-size: 13px;
     line-height: 21px;
-    margin-top: -280px;
+    margin-top: 337px;
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;

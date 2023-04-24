@@ -1,15 +1,17 @@
 const img = [
     {
-    url: "images\slider1.jpg"
+    url: "./images/slider1.jpg"
 },
 {
-    url: "images\slider2.jpg"
+    url: './images/slider2.jpg'
 },
 {
-     url: "images\slider2.jpg" 
+     url: "./images/slider2.jpg" 
 }
 
 ];
+
+initSlider(img)
 
 function initSlider(images, options) {
 if (!images || !images.length) return;
@@ -27,22 +29,19 @@ if (!images || !images.length) return;
 
     initImages();
     initArrows();
+
     if (options.dots) {
-        initDots();
+        // initDots();
     }
 
     if (options.autoplay) {
-        initAutopley();
+        // initAutopley();
     }
 
     function initImages() {
         images.forEach((image, index) => {
-            let imageElement =
-    document.createElement("div");
-            imageElement.className = `image n${index}
-            ${index? "" : "active"}`;
-            imageElement.dataset.index = index;
-            imageElement.style
-        })
+        document.querySelector('.images-list').innerHTML +=
+        `<img class="pic__sl picture-slider__adm image n${index}" src="${image.url}"alt="Rostov-on-Don">`
+        });
     }
 }
