@@ -18,8 +18,11 @@
     position: absolute;
     left: 0;
     top: 0;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 800ms ease;
+  }
+  .slider__images .image.active {
+    opacity: 1;
   }
   .slider__arrows {
     position: absolute;

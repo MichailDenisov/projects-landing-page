@@ -6,7 +6,7 @@ const img = [
     url: './images/slider2.jpg'
 },
 {
-     url: "./images/slider2.jpg" 
+     url: "./images/slider3.jpg" 
 }
 
 ];
@@ -45,3 +45,21 @@ if (!images || !images.length) return;
         });
     }
 }
+
+function initArrows() {
+    let lastindex = images.length - 1;
+    sliderArrows.querySelector(".slider-arrows").forEach(arrow => {
+        arrow.querySelector("click", function() {
+            let interiorNumber = +sliderImages.querySelector(".active").detaset.index;
+            let nextNumber;
+            if (arrow.classList.contains("left")) {
+                nextNumber = interiorNumber === 0? lastindex : interiorNumber - 1;
+            } else {
+                nextNumber = interiorNumber === lastindex? 0 : interiorNumber + 1;
+
+            }
+            moveSlider(nextNumber);
+        });
+    });
+}
+
