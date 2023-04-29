@@ -68,5 +68,14 @@ function initArrows(images) {
 }
 
 function moveSlider(nextNumber){
+    sliderImages.querySelector(`.pic__sl.active`)?.classList.remove('active')
+    sliderImages.querySelector(`.pic__sl.n${nextNumber}`).classList.add('active')
+    
     console.log(nextNumber)
 }
+
+let images = [['./images/slider1.jpg','#href1'],
+                ['./images/slider2.jpg','#href2'],
+                ['./images/slider3.jpg','#href3']];
+ let a = Math.floor(Math.random()*images.length);
+ document.write('<a href="'+images[a][1]+'"><img src="'+images[a][0]+'"</a>');               
