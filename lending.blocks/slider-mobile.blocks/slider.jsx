@@ -70,12 +70,29 @@ function initArrows(images) {
 function moveSlider(nextNumber){
     sliderImages.querySelector(`.pic__sl.active`)?.classList.remove('active')
     sliderImages.querySelector(`.pic__sl.n${nextNumber}`).classList.add('active')
+
+    if (options.dots) {
+        let dotsWrapper = document.querySelectorAll(".nav-slider__item");
+        dotsWrapper.querySelector(".nav-item.active").classList.remove("active");
+        dotsWrapper.querySelector(`<div className="n1">num</div>`).classList.add("active");
+        
+    }
     
     console.log(nextNumber)
 }
-
-let images = [['./images/slider1.jpg','#href1'],
-                ['./images/slider2.jpg','#href2'],
-                ['./images/slider3.jpg','#href3']];
- let a = Math.floor(Math.random()*images.length);
- document.write('<a href="'+images[a][1]+'"><img src="'+images[a][0]+'"</a>');               
+  
+function initDots() { 
+    let dotsWrapper = document.createElement("div");
+    dotsWrapper.className = ".nav-slider__item";
+    images.forEach((images, index) => {
+        let dot = document.createElement("div");
+        dot.className = `nav-item n${index}
+        ${index? "" : "active"}`;
+            dot.dataset.index = index;
+            dot.addEventListener("click",function() {
+                moveSlider(this.dataset.index);
+            });
+            dotsWrapper.appendChild(dot); 
+    });
+    sliderWrapper.appendChild(dotsWrapper);
+}
