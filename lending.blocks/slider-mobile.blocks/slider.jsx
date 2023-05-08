@@ -14,6 +14,8 @@ const img = [
 const sliderWrapper = document.querySelector(".picture-slider");
 const sliderImages = sliderWrapper.querySelector(".pic__sl");
 const sliderArrows = sliderWrapper.querySelectorAll(".slider__arrow");
+const dots = document.querySelector(".dots");
+const link = document.querySelector(".nav-link"); 
 
 let interiorNumber = 0;
 
@@ -23,7 +25,8 @@ function initSlider(images, options) {
 if (!images || !images.length) return;    
 
     options = options || {
-        dots: false,
+        link: true,
+        dots: true,
         titles: false,
         autopley: false,
         autoplayInterval: 3000
@@ -33,12 +36,15 @@ if (!images || !images.length) return;
     initArrows(images);
 
     if (options.dots) {
-        initDots();
+        initDots(images);
     }
 
     if (options.autoplay) {
         initAutopley();
     }
+     
+    if (options.link)
+        initList(images);
 
 }
 
@@ -71,28 +77,34 @@ function moveSlider(nextNumber){
     sliderImages.querySelector(`.pic__sl.active`)?.classList.remove('active')
     sliderImages.querySelector(`.pic__sl.n${nextNumber}`).classList.add('active')
 
-    if (options.dots) {
-        let dotsWrapper = document.querySelectorAll(".nav-slider__item");
-        dotsWrapper.querySelector(".nav-item.active").classList.remove("active");
-        dotsWrapper.querySelector(`<div className="n1">num</div>`).classList.add("active");
-        
-    }
     
     console.log(nextNumber)
 }
   
-function initDots() { 
-    let dotsWrapper = document.createElement("div");
-    dotsWrapper.className = ".nav-slider__item";
+function initDots(images) { 
     images.forEach((images, index) => {
-        let dot = document.createElement("div");
-        dot.className = `nav-item n${index}
-        ${index? "" : "active"}`;
-            dot.dataset.index = index;
-            dot.addEventListener("click",function() {
-                moveSlider(this.dataset.index);
-            });
-            dotsWrapper.appendChild(dot); 
+        let dot = `<div class="dots-navigation__slider-circle n${index === 0 ?`active` : ``}" data-index="${index}"></div>`;
+        dots.innerHTML += dot
     });
-    sliderWrapper.appendChild(dotsWrapper);
+
+    const dotsList = document.querySelectorAll('.dots-navigation__slider-circle')
+    dotsList.forEach((dot, index) => {
+        dot.addEventListener( "click", function() {
+            moveSlider(this.dataset.index);
+        });
+    })
+    // sliderWrapper.appendChild(dotsWrapper);
 }
+
+ function initlink (images) {
+    images.forEach((images, index) => {
+        let link = `<div class="nav-item__link n${index} ${index === 0 ? `active` : ``}" data-index="${index}"></div>`;
+        link.innerHTML += link
+    });
+    const linkList = document.querySelectorAll('.nav-item__link')
+    linkList.forEach((link, index) => {
+        link.addEventListener("click", function(){
+            moveSlider(this.dataset.index);
+        })
+    })
+ }

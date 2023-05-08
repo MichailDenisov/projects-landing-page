@@ -213,23 +213,6 @@ ul {
     padding-top: 94px;
     padding-bottom: 34px;
 }
-.nav-slider__item {
-    list-style: none;
-    display: flex;
-} 
-.nav-item {
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 19px;
-    text-transform: uppercase;
-    margin-right: 67px;
-}
-.nav-item__link {
-    color: rgba(255, 255, 255, 0.3);
-    text-decoration: none;
-}
 .slider-content { 
     font-family: var(--font-primary);
     font-style: normal;
@@ -264,7 +247,7 @@ slider-content_right {
     cursor: pointer;
 }
 .dots-navigation__slider {
-    margin-right: 18px;
+    margin: 0px;
 }
 .dots-navigation__slider-circle:hover { 
     background-color:var(--color-backround-wihte);    
