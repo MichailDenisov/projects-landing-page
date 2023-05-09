@@ -44,14 +44,14 @@ if (!images || !images.length) return;
     }
      
     if (options.link)
-        initList(images);
+        initlink(images);
 
 }
 
     function initImages(images) {
         images.forEach((image, index) => {
         document.querySelector('.images-list').innerHTML +=
-        `<img class="pic__sl picture-slider__adm image n${index}" src="${image.url}"alt="Rostov-on-Don">`
+        `<img class="pic__sl picture-slider__adm image n${index} ${index === 0 ? `active` : ``}" src="${image.url}"alt="Rostov-on-Don">`
         });
     }
 
@@ -98,13 +98,18 @@ function initDots(images) {
 
  function initlink (images) {
     images.forEach((images, index) => {
-        let link = `<div class="nav-item__link n${index} ${index === 0 ? `active` : ``}" data-index="${index}"></div>`;
-        link.innerHTML += link
+        let links = `<div class="nav-item nav-item__link n${index === 0 ? `active` : ``}" data-index="${index}">Rostov-on-Don</div>`
+        
+        link.innerHTML += links
     });
     const linkList = document.querySelectorAll('.nav-item__link')
     linkList.forEach((link, index) => {
-        link.addEventListener("click", function(){
+        link.addEventListener("click", function() {
             moveSlider(this.dataset.index);
-        })
+        });
     })
  }
+//  7. Активные элементы - точки , навигации имеют класс active.
+//  В css добавьте для них стили для выделения(например активная точка имеет теже стили что и точка на которую повешали hover)
+ 
+//  [1 изображение]

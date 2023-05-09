@@ -249,9 +249,6 @@ slider-content_right {
 .dots-navigation__slider {
     margin: 0px;
 }
-.dots-navigation__slider-circle:hover { 
-    background-color:var(--color-backround-wihte);    
-}
 .dots-navigation__slider:nth-child(5) {
     margin: 0px;
 }
@@ -360,8 +357,8 @@ slider-content_right {
     margin-top: 150px;
 }
 .section-title {
-    margin-bottom: -18px;
-    margin-top: -21px;
+    margin-bottom: -22px;
+    margin-top: -24px;
 
 }
 .control-title {
@@ -940,7 +937,7 @@ slider-content_right {
 .button-adress {
     height: 55px;
     width: 202px;
-    margin-top: 26px;
+    margin-top: 48px;
     font-size: 13px;
     text-transform: uppercase;
 }
