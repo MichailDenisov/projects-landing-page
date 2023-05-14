@@ -1,12 +1,15 @@
 const img = [
     {
-    url: "./images/slider1.jpg"
+    url: "./images/slider1.jpg",
+    link: "Rostov-on-Don, Admiral"
 },
 {
-    url: './images/slider2.jpg'
+    url: './images/slider2.jpg',
+    link: "Sochi Thieves"
 },
 {
-     url: "./images/slider3.jpg" 
+     url: "./images/slider3.jpg",
+     link: "Rostov-on-Don Patriotic" 
 }
 
 ];
@@ -59,7 +62,6 @@ function initArrows(images) {
     let lastindex = images.length - 1;
     sliderArrows.forEach(arrow => {
         arrow.addEventListener("click", function() {
-            // let interiorNumber = +sliderImages.querySelector(".active").detaset.index;
             let nextNumber;
             if (arrow.classList.contains("left")) {
                 nextNumber = interiorNumber === 0? lastindex : interiorNumber - 1;
@@ -74,16 +76,25 @@ function initArrows(images) {
 }
 
 function moveSlider(nextNumber){
-    sliderImages.querySelector(`.pic__sl.active`)?.classList.remove('active')
-    sliderImages.querySelector(`.pic__sl.n${nextNumber}`).classList.add('active')
+    sliderImages.querySelector(`.pic__sl.active`)?.classList.remove('active');
+    sliderImages.querySelector(`.pic__sl.n${nextNumber}`).classList.add('active');
 
-    
+    if (options.dots) {
+        let dotsWrapper = document.querySelector(".dots");
+        dotsWrapper.querySelector(".dots-navigation__slider-circle.active")?.classList.remove("active");
+        dotsWrapper.querySelector(`.dots-navigation__slider-circle.n${nextNumber}`).classList.add("active");
+    }
+   if (options.link) {
+    let linkWrapper = document.querySelector('.nav-link');
+    linkWrapper.querySelector('.nav-item__link.active')?.classList.remove("active");
+    linkWrapper.querySelector(`.nav-item__link.n${nextNumber}`).classList.add("active");
+   }
     console.log(nextNumber)
 }
   
 function initDots(images) { 
-    images.forEach((images, index) => {
-        let dot = `<div class="dots-navigation__slider-circle n${index === 0 ?`active` : ``}" data-index="${index}"></div>`;
+    images.forEach((image, index) => {
+        let dot = `<div class="dots-navigation__slider-circle n${index} ${index === 0 ?`active` : ``}" data-index="${index}"></div>`;
         dots.innerHTML += dot
     });
 
@@ -93,13 +104,16 @@ function initDots(images) {
             moveSlider(this.dataset.index);
         });
     })
-    // sliderWrapper.appendChild(dotsWrapper);
 }
+ 
+// function moveSlider(nextNumber) {
+//     sliderImages.querySelector(`.dots-navigation__slider-circle.active`)?.classList.remove(`active`)
+//     sliderImages.querySelector(`.dots-navigation__slider-circle .n${nextNumber} `).classList.add(`active`)
+// }
 
- function initlink (images) {
-    images.forEach((images, index) => {
-        let links = `<div class="nav-item nav-item__link n${index === 0 ? `active` : ``}" data-index="${index}">Rostov-on-Don</div>`
-        
+ function initlink(images) {
+    images.forEach((image, index) => {
+        let links = `<div class="nav-item nav-item__link n${index} ${index === 0 ? `active` : ``}" data-index="${index}">${image.link}</div>`
         link.innerHTML += links
     });
     const linkList = document.querySelectorAll('.nav-item__link')
@@ -109,7 +123,7 @@ function initDots(images) {
         });
     })
  }
-//  7. Активные элементы - точки , навигации имеют класс active.
-//  В css добавьте для них стили для выделения(например активная точка имеет теже стили что и точка на которую повешали hover)
  
-//  [1 изображение]
+
+//  ну и логично при переключении картинок надо удалять класс active
+//  у старых активных элементов и добавлять новым его(касается точки и навигации)

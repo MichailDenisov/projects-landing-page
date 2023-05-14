@@ -67,7 +67,8 @@
 }
 
 .dots-navigation__slider-circle:active {
-  background-color: var(--color-backround-wihte);
+  background-color: goldenrod;
+  border: #E3B873;
 }
 
 /* .dots-navigation__slider-circle:focus {
@@ -76,29 +77,31 @@
  .nav-link{
     list-style: none;
     display: flex;
-    justify-content: space-between;
-    width: 69%;
+    justify-content: flex-start;
+    width: 85%;
     margin-top: 13px;
 } 
  .nav-item__link{
-  font-family: var(--font-primary);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
   text-transform: uppercase;
-  margin-right: 67px;
+  margin-right: 60px;
 }
 .nav-item__link {
   color: rgba(255, 255, 255, 0.3);
   text-decoration: none;
 }
 .nav-item__link:hover {
-  /* text-decoration: underline; Добавляем подчеркивание при наведении курсора на ссылку */
-  color: #E3B873; 
+    text-decoration: underline;/* Добавляем подчеркивание при наведении курсора на ссылку */
+  /* color: #E3B873;  */ 
+  text-decoration-color:rgba(255, 255, 255, 0.3);
+  cursor: pointer;
 }
  .nav-item__link:active {
-  color: var(--color-font-gold);
+  color: goldenrod;
+  text-decoration: underline;
  }
 
 
