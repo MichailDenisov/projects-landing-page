@@ -79,12 +79,12 @@ function moveSlider(nextNumber){
     sliderImages.querySelector(`.pic__sl.active`)?.classList.remove('active');
     sliderImages.querySelector(`.pic__sl.n${nextNumber}`).classList.add('active');
 
-    if (options.dots) {
+    if (dots) {
         let dotsWrapper = document.querySelector(".dots");
         dotsWrapper.querySelector(".dots-navigation__slider-circle.active")?.classList.remove("active");
         dotsWrapper.querySelector(`.dots-navigation__slider-circle.n${nextNumber}`).classList.add("active");
     }
-   if (options.link) {
+   if (link) {
     let linkWrapper = document.querySelector('.nav-link');
     linkWrapper.querySelector('.nav-item__link.active')?.classList.remove("active");
     linkWrapper.querySelector(`.nav-item__link.n${nextNumber}`).classList.add("active");
@@ -125,5 +125,3 @@ function initDots(images) {
  }
  
 
-//  ну и логично при переключении картинок надо удалять класс active
-//  у старых активных элементов и добавлять новым его(касается точки и навигации)
